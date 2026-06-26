@@ -1,0 +1,271 @@
+/* Contact.css */
+.contact-section {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #233142;
+  padding: 80px 24px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+.title-underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background-color: #10b981;
+}
+
+.contact-description {
+  margin: 24px auto 0;
+  max-width: 800px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #94a3b8;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .content-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+/* Left Column */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .left-column {
+    grid-column: span 5;
+  }
+}
+
+.connect-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #1f2a38;
+  color: #10b981;
+  border: 1px solid rgba(51, 65, 85, 0.4);
+}
+
+.message-icon {
+  margin-bottom: 8px;
+}
+
+.connect-title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: white;
+}
+
+.connect-description {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.625;
+  max-width: 320px;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.email-icon,
+.phone-icon,
+.location-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.contact-value {
+  font-size: 14px;
+  color: #e2e8f0;
+  margin-top: 4px;
+}
+
+.contact-value.address {
+  color: #cbd5e1;
+  line-height: 1.625;
+}
+
+/* Right Column */
+.right-column {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .right-column {
+    grid-column: span 7;
+  }
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #f1f5f9;
+  margin-bottom: 8px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    flex-direction: row;
+    gap: 24px;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #cbd5e1;
+  letter-spacing: 0.02em;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 6px;
+  background-color: #1f2a38;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #10b981;
+}
+
+.form-textarea {
+  resize: none;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+/* Form Actions */
+.form-actions {
+  padding-top: 8px;
+}
+
+.submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #10b981;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+}
+
+.submit-button:hover {
+  background-color: #059669;
+}
+
+.submit-button:active {
+  transform: scale(0.99);
+}
