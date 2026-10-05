@@ -1,5 +1,3 @@
-// App.jsx
-
 import React from "react";
 
 import {
@@ -8,13 +6,16 @@ import {
   Route
 } from "react-router-dom";
 
-import { motion } from "framer-motion";
-
 import Navbar from "./components/Navbar";
+
 import Home from "./pages/Home";
-import About from './pages/About'
+import About from "./pages/About";
 import Skill from "./pages/Skill";
 import Contact from "./pages/Contact";
+import MyStudent from "./pages/MyStudent";
+import Projects from "./pages/Projects";
+
+
 function App() {
 
   return (
@@ -22,54 +23,58 @@ function App() {
     <BrowserRouter>
 
       <div
-
         style={{
-
           minHeight: "100vh",
-
           width: "100%",
-
           overflow: "hidden",
-
-          position: "relative",
-
-          background:
-            "linear-gradient(135deg,#edf5f9 0%,#dcecf5 45%,#ffffff 100%)"
-
+          position: "relative"
         }}
-
       >
-      
-        <div
 
-          style={{
+        <Navbar />
 
-            position: "relative",
+        <Routes>
 
-            zIndex: 2
+          <Route
+            path="/"
+            element={<Home />}
+          />
 
-          }}
+          <Route
+            path="/about"
+            element={<About />}
+          />
 
-        >
+          <Route
+            path="/skills"
+            element={<Skill />}
+          />
 
-          <Navbar />
+          <Route
+            path="/contact"
+            element={<Contact />}
+          />
 
-          <Routes>
+          <Route
+            path="/mystudent"
+            element={<MyStudent />}
+          />
 
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skill />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          {/* PROJECTS */}
 
-        </div>
+          <Route
+            path="/projects"
+            element={<Projects />}
+          />
+
+        </Routes>
 
       </div>
 
     </BrowserRouter>
 
   );
-
 }
+
 
 export default App;

@@ -92,7 +92,7 @@ export default function About() {
                 transition={{ duration: 0.3 }}
               >
                 <Avatar
-                  src="/images/ds.jpg"
+                  src="/Student/ds.jpeg"
                   alt="Dinesh"
                   sx={{
                     width: { xs: 200, sm: 260, md: 340 },
